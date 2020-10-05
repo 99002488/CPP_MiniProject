@@ -12,5 +12,5 @@ sickTreat.o: sickTreat.cpp sickTreat.h medical.h
 medical.o: medical.cpp medical.h
         g++ $< -c
 clean:
-        rm -rf *.o *.out
+        rm -rf *.o *.out 
 
