@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         make test -C Medical/
-        valgrind ./Medical/build/Test_Medical.out
+        valgrind ./Medical/build/medical.o
