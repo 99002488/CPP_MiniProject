@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         g++ Medical/medical.cpp -o Medical/medical.out 
-        valgrind ./medical.out
+        valgrind ./medical.out 
