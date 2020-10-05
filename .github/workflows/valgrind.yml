@@ -19,5 +19,5 @@ jobs:
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
       run: |
-        make test -C Medical/
-        valgrind ./Medical/build/medical.o
+        g++ Medical/medical.cpp -o Medical/medical.out 
+        valgrind ./medical.out
