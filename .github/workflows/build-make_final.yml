@@ -14,9 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-
-
-
-
     - name: make all
-      run:  make all -C Medical/   
+      run:  make all -C CPP_MiniProject-master/ 
