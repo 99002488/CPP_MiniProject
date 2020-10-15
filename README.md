@@ -1,6 +1,7 @@
 # CPP_MiniProject
 
-
+## *-Medical Store Managament System-*
+This Mini Project is implemented in the C++ language with the inclusion of Linux related concepts such as Threads and Mutex to perform mutual exclusion. This project is an implementation of addition, deletion and updation of medicines and their data such as Name, concentration, price of the medicine, Expiry and Manufacturing date. One thread would handle the addition of medicines while the other thread is used to count the list of medicines inserted or currently in the database. A mutex lock is applied so that the process of counting would happen only after the first thread's instructions are executed and the lock is released. Google Testing has been implemented to perform the unit testing on the Project. STL concepts such as lists were implemented in this project to take in the medicines details into a list and to access them later for further modifications and display.
 
 
 |Cppcheck|Codacy|Valgrind|UnitTesting|C/C++ CI|
