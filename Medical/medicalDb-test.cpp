@@ -12,8 +12,8 @@
 #include<cstdint>
 
 
-pthread_mutex_t m1=PTHREAD_MUTEX_INITIALIZER;
-sem_t s1;
+pthread_mutex_t m1=PTHREAD_MUTEX_INITIALIZER;                          //adding mutex
+sem_t s1;                                                              //adding semaphore
 MedicalDb medicines;
 
 
@@ -23,7 +23,7 @@ void* efun1(void* pv){
 
         pthread_mutex_lock(&m1);
 
-        medicines.addMedicine(1,"roko",2,"r","12/2019","11/2022",20.00,"diarrhoea","tablet");
+        medicines.addMedicine(1,"roko",2,"r","12/2019","11/2022",20.00,"diarrhoea","tablet");                //adding all the parameters
         medicines.addMedicine(2,"cetacin",500,"c","06/2020","06/2022",15.00,"fever","tablet");
         medicines.addMedicine(3,"okcet",10,"o","06/2016","06/2022",18.00,"cold","tablet");
         medicines.addMedicine(4,"respira",15,"r","10/2019","10/2022",20.00,"cough","syrup");
@@ -53,7 +53,7 @@ void* efun2(void* pv)        //consumer
 
 namespace {
 
-class SickTreatDbTest : public ::testing::Test {
+class SickTreatDbTest : public ::testing::Test {                                             
 
 protected:
   void SetUp() {
