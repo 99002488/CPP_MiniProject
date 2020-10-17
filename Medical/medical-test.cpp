@@ -6,7 +6,7 @@
 
 namespace {
 
-class MedicalTest : public ::testing::Test {
+class MedicalTest : public ::testing::Test {                                   //inherits properties from test class
 
 protected:
   void SetUp() { // override {
@@ -18,7 +18,7 @@ protected:
   Medical *ptr;
 };
 
-TEST_F(MedicalTest, DefaultConstructor) {
+TEST_F(MedicalTest, DefaultConstructor) {                  //default constuctor
   SickTreat ft;
   EXPECT_EQ(0, ft.getID());
   EXPECT_EQ(0, ft.getType().length());
@@ -26,7 +26,7 @@ TEST_F(MedicalTest, DefaultConstructor) {
   EXPECT_EQ(0, ft.getPrice());
   //EXPECT_EQ(0, ft.getDistance());
 }
-TEST_F(MedicalTest, ParameterizedConstructor) {
+TEST_F(MedicalTest, ParameterizedConstructor) {             //parameterized constructor
   SickTreat *fptr = dynamic_cast<SickTreat*>(ptr);
   EXPECT_EQ( 1, fptr->getID());
   EXPECT_STREQ("diarrhoea", fptr->getType().c_str());
@@ -35,7 +35,7 @@ TEST_F(MedicalTest, ParameterizedConstructor) {
 //  EXPECT_EQ(8, fptr->getDistance());
 }
 
-TEST_F(MedicalTest, AnotherTest) {
+TEST_F(MedicalTest, AnotherTest) {                            //test parameterized constructor
   SickTreat ft(2,"cetacin",500,"c","06/2020","06/2022",15.00,"fever","tablet");
   Medical *pt = &ft;
   EXPECT_EQ( 2, ft.getID());
